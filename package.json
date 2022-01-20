@@ -1,0 +1,27 @@
+{
+  "name": "expresslessonone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon src/index.js",
+    "start-docker": "docker run --name sql --rm -dp 3306:3306 -v m32-mysql-config:/etc -v m32-mysql-data:/var/lib/mysql mysql/mysql-server:latest",
+    "stop-docker": "docker stop sql"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^14.1.0",
+    "express": "^4.17.2",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.3.3",
+    "nodemon": "^2.0.15",
+    "passport": "^0.5.2",
+    "passport-jwt": "^4.0.0",
+    "passport-local": "^1.0.0",
+    "sequelize": "^6.13.0"
+  }
+}
